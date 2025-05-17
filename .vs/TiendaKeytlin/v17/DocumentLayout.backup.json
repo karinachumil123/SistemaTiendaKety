@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\controllers\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\models\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\dtos\\ventacreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\dtos\\ventacreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\karin\\documents\\proyecto is\\backendtiendakeytlin\\tiendakeytlin.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAJwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T02:35:58.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Services\\AuthService.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Services\\AuthService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAD4v18AAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T02:35:56.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAGkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T02:35:53.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAACgBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:41:47.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ventas.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Controllers\\Ventas.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\Ventas.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Controllers\\Ventas.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\Ventas.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAWwKUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:26:09.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DetalleVenta.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Models\\DetalleVenta.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\DetalleVenta.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Models\\DetalleVenta.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\DetalleVenta.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:25:54.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\Models\\Venta.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\Venta.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAywA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:25:46.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VentaCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\DTOs\\VentaCreateDto.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\DTOs\\VentaCreateDto.cs",
+              "ToolTip": "C:\\Users\\karin\\Documents\\Proyecto IS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\DTOs\\VentaCreateDto.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\DTOs\\VentaCreateDto.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAA8wF0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T01:25:30.978Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

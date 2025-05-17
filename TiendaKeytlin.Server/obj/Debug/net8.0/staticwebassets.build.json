@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ux3w+viY041sQoh2nSfXQYQYCnUClRpLU45MSajmZLI=",
+  "Source": "TiendaKeytlin.Server",
+  "BasePath": "_content/TiendaKeytlin.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
