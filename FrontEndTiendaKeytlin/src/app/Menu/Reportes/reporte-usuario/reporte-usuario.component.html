@@ -1,0 +1,94 @@
+<div class="contenedor">
+  <!-- Filtros -->
+  <div class="filtros">
+    <div class="busqueda-fechas">
+
+      <!-- Buscador -->
+      <div class="buscador">
+        <input type="text" placeholder="Buscar por nombre, apellido o correo"
+          [(ngModel)]="filtroUsuario" (keyup.enter)="buscarUsuario()" />
+        <i class="fas fa-search icono-busqueda"></i>
+      </div>
+
+      <!-- Filtros por fecha -->
+      <div class="filtros-fecha">
+        <input type="date" [(ngModel)]="fechaInicio" />
+        <input type="date" [(ngModel)]="fechaFin" />
+        <button (click)="filtrarPorFecha()">
+          <i class="fas fa-filter"></i>
+          Filtrar
+        </button>
+      
+      <button (click)="limpiarFiltros()" class="btn-limpiar">
+        <i class="fas fa-eraser"></i> 
+      </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reporte -->
+  <div id="reporteUsuarios" class="reporte">
+    <div class="encabezado-reporte">
+      <h1>REPORTE DE USUARIOS</h1>
+      <div class="logo-centro">
+        <img src="/assets/images/Logo.png" alt="Logo Keytelin">
+      </div>
+      <div class="datos-empresa">
+        <div>
+          <p><strong>Teléfono:</strong> {{ empresa?.telefono }}</p>
+          <p><strong>Email:</strong> {{ empresa?.correo }}</p>
+          <p><strong>Dirección:</strong> {{ empresa?.direccion }}</p>
+        </div>
+        <div>
+          <p><strong>Mes y Año:</strong> {{ reportMonth }}</p>
+          <p><strong>Día y hora de emisión:</strong> {{ reportDate }}</p>
+          <p><strong>Realizado por:</strong> {{ reportUser }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <table class="tabla-usuarios">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Estado</th>
+          <th>Inicio Sesión</th>
+          <th>Fecha creación</th>
+          <th>Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuariosPaginados()">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.correo }}</td>
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.apellido }}</td>
+          <td>
+            <span [ngStyle]="{
+              'background-color': usuario.estado === 'Activo' ? '#d1fae5' :
+                                 usuario.estado === 'Inactivo' ? '#fee2e2' :
+                                 '#fef9c3',
+              'color': usuario.estado === 'Activo' ? '#065f46' :
+                        usuario.estado === 'Inactivo' ? '#991b1b' :
+                        '#78350f'
+            }">
+              {{ usuario.estado }}
+            </span>
+          </td>
+          <td>{{ usuario.ultimoInicioSesion | date:'dd/MM/yyyy' }}</td>
+          <td>{{ usuario.fechaCreacion | date:'dd/MM/yyyy' }}</td>
+          <td>{{ usuario.rol }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Botón exportar -->
+  <div class="boton-exportar">
+    <button (click)="exportarPDFFrontend()">Exportar PDF</button>
+  </div>
+</div>

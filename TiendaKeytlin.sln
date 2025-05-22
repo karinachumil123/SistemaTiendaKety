@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tiendakeytlin.client", "tiendakeytlin.client\tiendakeytlin.client.esproj", "{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiendaKeytlin.Server", "TiendaKeytlin.Server\TiendaKeytlin.Server.csproj", "{3C486012-31BD-4F23-A1A9-2C3219A04040}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3C486012-31BD-4F23-A1A9-2C3219A04040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C486012-31BD-4F23-A1A9-2C3219A04040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C486012-31BD-4F23-A1A9-2C3219A04040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C486012-31BD-4F23-A1A9-2C3219A04040}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEB16169-B202-472E-8B28-6F2E3E2C0C45}
+	EndGlobalSection
+EndGlobal

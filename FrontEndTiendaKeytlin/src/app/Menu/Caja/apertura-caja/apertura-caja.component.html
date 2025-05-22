@@ -1,0 +1,26 @@
+<div class="flex items-center justify-center mb-8 mt-14">
+  <div
+  class="bg-[#64839F] p-6 rounded-xl border-[3px] border-[#011552] w-[700px] min-h-[400px] flex flex-col items-center justify-between">
+    <h1 class="text-white text-4xl font-bold text-center mb-8">Apertura de Caja</h1>
+
+    <label class="font-semibold text-white block text-lg w-full text-left mb-2">
+  Fecha: {{ fechaMostrar }}
+</label>
+
+<label for="monto" class="font-semibold text-white block text-lg w-full text-left mb-2">
+  Monto de Apertura
+</label>
+<input type="number" id="monto" [(ngModel)]="monto" class="bg-white w-full p-3 border-[3px] border-[#670305] rounded mb-8" />
+
+<div *ngIf="ultimaApertura" class=" mb-3  text-yellow-400 ">
+  <p class="font-semibold">Última apertura registrada:</p>
+  <p>Fecha: {{ ultimaApertura.fecha | date:'dd/MM/yyyy' }}</p>
+  <p>Monto: {{ ultimaApertura.monto | currency:'Q ' }}</p>
+</div>
+
+<button (click)="guardarApertura()" class="w-[200px] bg-[#070826] text-white font-bold py-2 border-[3px] border-[#B40001] hover:bg-[#011552] transition mx-auto rounded mb-10">
+  Agregar Apertura
+</button>
+
+  </div>
+</div>

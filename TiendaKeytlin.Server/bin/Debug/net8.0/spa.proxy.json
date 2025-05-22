@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:56232",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\karin\\OneDrive\\Escritorio\\Proyecto IqS\\BackEndTiendaKeytlin\\TiendaKeytlin.Server\\..\\tiendakeytlin.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
