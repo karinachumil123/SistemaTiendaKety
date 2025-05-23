@@ -45,7 +45,7 @@ namespace TiendaKeytlin.Server.Data
               );
 
             //Empresa
-            modelBuilder.Entity<EstadoPedido>().HasData(
+            modelBuilder.Entity<Empresa>().HasData(
                   new Empresa { Id = 1, Nombre = "Tienda Keytlin", Telefono = "5881 6213", Correo = "tiendakeytelin@gmail.com", Direccion = "" }
                  );
 
