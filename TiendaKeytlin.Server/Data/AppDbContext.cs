@@ -51,8 +51,9 @@ namespace TiendaKeytlin.Server.Data
 
             //Usuario Admin
             modelBuilder.Entity<Usuario>().HasData(
-                  new Usuario { Id = 1, Nombre = "Edwin", Apellido = "Chumil", Telefono = "5881 6213", Correo = "tiendakeytelin@gmail.com", Contrasena = "@Admin2025", EstadoId = 1, RolId = 1,  }
+                  new Usuario { Id = 1, Nombre = "Edwin", Apellido = "Chumil", Telefono = "5881 6213", Correo = "tiendakeytelin@gmail.com", Contrasena = "@Admin2025", EstadoId = 1, RolId = 1, }
                  );
+
             // Insertar datos iniciales para Roles
             modelBuilder.Entity<RolUsuario>().HasData(
                 new RolUsuario { Id = 1, Nombre = "Admin" },
