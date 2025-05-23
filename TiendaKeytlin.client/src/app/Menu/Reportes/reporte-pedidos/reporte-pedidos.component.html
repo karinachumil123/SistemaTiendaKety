@@ -1,0 +1,145 @@
+<div class="contenedor">
+    <!-- Filtros -->
+    <div class="filtros">
+        <div class="busqueda-fechas">
+            <!-- Buscador -->
+            <div class="buscador">
+                <input type="text" placeholder="Buscar por ID, proveedor o estado"
+                    [(ngModel)]="filtroTexto" (keyup.enter)="buscarPedidos()" />
+                <i class="fas fa-search icono-busqueda"></i>
+            </div>
+
+            <!-- Filtros adicionales -->
+            <div class="filtros-adicionales">
+                <select [(ngModel)]="filtroProveedor" class="select-filtro">
+                    <option value="">Todos los proveedores</option>
+                    <option *ngFor="let proveedor of proveedores" [value]="proveedor.id">
+                        {{ proveedor.nombre }}
+                    </option>
+                </select>
+
+                <select [(ngModel)]="filtroEstado" class="select-filtro">
+                    <option value="">Todos los estados</option>
+                    <option *ngFor="let estado of estados" [value]="estado.id">
+                        {{ estado.nombre }}
+                    </option>
+                </select>
+            </div>
+
+            <!-- Filtros de fecha -->
+            <div class="filtros-fecha-rango">
+                <input type="date" [(ngModel)]="fechaInicio" class="input-fecha" placeholder="Fecha inicio">
+                <input type="date" [(ngModel)]="fechaFin" class="input-fecha" placeholder="Fecha fin">
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="filtros-fecha">
+                <button (click)="buscarPedidos()" class="btn-buscar">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </button>
+
+                <button (click)="limpiarFiltros()" class="btn-limpiar">
+                    <i class="fas fa-eraser"></i>
+                    Limpiar
+                </button>
+            </div>
+        </div>
+<!-- 
+         Resumen de pedidos 
+        <div class="resumen-pedidos">
+            <div class="stat-card">
+                <h3>Total Pedidos</h3>
+                <p>{{ totalPedidos }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Productos</h3>
+                <p>{{ totalProductosPedidos }} unidades</p>
+            </div>
+            <div class="stat-card">
+                <h3>Valor Total</h3>
+                <p>Q. {{ valorTotalPedidos | number:'1.2-2' }}</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Reporte -->
+    <div id="reportePedidos" class="reporte">
+        <div class="encabezado-reporte">
+            <h1>REPORTE DE PEDIDOS</h1>
+            <div class="logo-centro">
+                <img src="/assets/images/Logo.png" alt="Logo Keytelin">
+            </div>
+            <div class="datos-empresa">
+                <div>
+                    <p><strong>Teléfono:</strong> {{ empresa?.telefono }}</p>
+                    <p><strong>Email:</strong> {{ empresa?.correo }}</p>
+                    <p><strong>Dirección:</strong> {{ empresa?.direccion }}</p>
+                </div>
+                <div>
+                    <p><strong>Mes y Año:</strong> {{ reportMonth }}</p>
+                    <p><strong>Día y hora de emisión:</strong> {{ reportDate }}</p>
+                    <p><strong>Realizado por:</strong> {{ reportUser }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de pedidos -->
+        <table class="tabla-pedidos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha Pedido</th>
+                    <th>Proveedor</th>
+                    <th>Estado</th>
+                    <th>Cant. Productos</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pedido of pedidosPaginados()">
+                    <td>{{ pedido.id }}</td>
+                    <td>{{ formatearFecha(pedido.fechaPedido) }}</td>
+                    <td>{{ obtenerNombreProveedor(pedido.proveedorId) || pedido.proveedorNombre || 'N/A' }}</td>
+                    <td>
+                        <span [ngStyle]="{
+              'background-color': getColorEstado(obtenerNombreEstado(pedido.estadoPedidoId) || pedido.estadoNombre),
+              'color': getColorTextoEstado(obtenerNombreEstado(pedido.estadoPedidoId) || pedido.estadoNombre),
+              'padding': '0.25rem 0.5rem',
+              'border-radius': '9999px',
+              'font-size': '0.75rem',
+              'font-weight': '600',
+              'display': 'inline-flex'
+            }">
+                            {{ obtenerNombreEstado(pedido.estadoPedidoId) || pedido.estadoNombre || 'N/A' }}
+                        </span>
+                    </td>
+                    <td>{{ calcularCantidadProductos(pedido) }}</td>
+                    <td>Q. {{ calcularValorPedido(pedido) | number:'1.2-2' }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Paginación -->
+        <div class="paginacion" *ngIf="totalPaginas > 1">
+            <button (click)="paginaAnterior()" [disabled]="paginaActual === 1" class="btn-paginacion">
+                <i class="fas fa-chevron-left"></i> Anterior
+            </button>
+            <span class="info-paginacion">
+                Página {{ paginaActual }} de {{ totalPaginas }}
+                ({{ pedidos.length }} pedidos)
+            </span>
+            <button (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas" class="btn-paginacion">
+                Siguiente <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Botón exportar -->
+    <div class="boton-exportar">
+        <button (click)="exportarPDFFrontend()">
+            <i class="fas fa-file-pdf"></i>
+            Exportar PDF
+        </button>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="fixed inset-0 flex items-center justify-center z-50">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+
+  <div class="bg-white rounded-lg shadow-lg p-6 relative z-10 w-full max-w-3xl">
+    <div class="max-h-[75vh] overflow-y-auto rounded-lg pr-2">
+      <span class="absolute top-0 right-0 p-4 cursor-pointer" (click)="cancelar()">&times;</span>
+
+      <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-left">
+        {{ getTitulo() }}
+      </h2>
+
+      <form #categoriaForm="ngForm" (ngSubmit)="!modoVista && guardarCategoria()" novalidate>
+        <fieldset [disabled]="modoVista">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <!-- Nombre categoría -->
+            <div class="mb-4">
+              <label for="nombreCategoria" class="block text-sm font-medium mb-1 text-left" style="color: #670305;">
+                Nombre categoría <span style="color: #670305;">*</span>
+              </label>
+              <input
+                type="text"
+                id="nombreCategoria"
+                name="nombreCategoria"
+                maxlength="100"
+                [(ngModel)]="nombreCategoria"
+                #nombreCategoriaCtrl="ngModel"
+                required
+                [class.bg-gray-100]="modoVista"
+                class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
+                style="border: 1px solid #070826; color: #670305;"
+                placeholder="Ejemplo: Golosinas"
+              />
+              <div *ngIf="nombreCategoriaCtrl.invalid && (nombreCategoriaCtrl.dirty || nombreCategoriaCtrl.touched)" class="text-red-500 text-sm mt-1">
+                <div *ngIf="nombreCategoriaCtrl.errors?.['required']">El nombre es obligatorio.</div>
+                <div *ngIf="nombreCategoriaCtrl.errors?.['maxlength']">Máximo 100 caracteres.</div>
+              </div>
+            </div>
+
+            <!-- Descripción -->
+            <div class="mb-4 md:col-span-2">
+              <label for="descripcion" class="block text-sm font-medium mb-1 text-left" style="color: #670305;">
+                Descripción
+              </label>
+              <textarea
+                id="descripcion"
+                name="descripcion"
+                maxlength="500"
+                [(ngModel)]="descripcion"
+                [class.bg-gray-100]="modoVista"
+                class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1 resize-none"
+                style="border: 1px solid #070826; color: #670305;"
+                rows="3"
+                placeholder="Ejemplo: Bolsa de golosinas"
+              ></textarea>
+            </div>
+
+            <!-- Estado -->
+            <div class="mb-4">
+              <label for="estadoId" class="block text-sm font-medium mb-1 text-left" style="color: #670305;">
+                Estado <span class="text-red-600">*</span>
+              </label>
+              <div class="relative">
+                <select
+                  id="estadoId"
+                  name="estadoId"
+                  [(ngModel)]="estadoId"
+                  #estadoCtrl="ngModel"
+                  required
+                  class="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-1 appearance-none"
+                  style="border: 1px solid #070826; color: #670305;"
+                >
+                  <option value="">Seleccione un estado</option>
+                  <option *ngFor="let estado of estados" [value]="estado.id">
+                    {{ estado.nombre }}
+                  </option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+              <div *ngIf="estadoCtrl.invalid && (estadoCtrl.dirty || estadoCtrl.touched)" class="text-red-500 text-sm mt-1">
+                <div *ngIf="estadoCtrl.errors?.['required']">El estado es obligatorio.</div>
+              </div>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <!-- Botones -->
+        <div class="flex justify-end mt-6 space-x-3">
+          <button type="button" (click)="cancelar()"
+            class="px-4 py-2 border border-gray-300 rounded-md text-white bg-[#B40001] hover:bg-[#9b0000]">
+            {{ modoVista ? 'Cerrar' : 'Cancelar' }}
+          </button>
+
+          <button type="submit" *ngIf="!modoVista" [disabled]="!categoriaForm.form.valid"
+            class="px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-[#070826] hover:bg-[#05061c] disabled:opacity-50 disabled:cursor-not-allowed">
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

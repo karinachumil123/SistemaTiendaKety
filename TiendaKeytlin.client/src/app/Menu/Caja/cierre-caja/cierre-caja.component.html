@@ -1,0 +1,76 @@
+<div id="contenido-a-imprimir">
+<h1 class="text-4xl text-center font-bold text-[#700000] mb-8">Cierre de Caja</h1>
+
+<div class="grid grid-cols-3 gap-4 mb-4">
+  <div>
+    <label>Nombre de cajero:</label>
+    <input type="text" [(ngModel)]="cierre.nombreCajero" class="border p-1 w-full" />
+  </div>
+  <div>
+    <label>Fecha de Apertura:</label>
+    
+    <input type="date" [(ngModel)]="cierre.fechaApertura" name="fechaApertura" class="border p-1 w-full">
+  </div>
+  <div>
+    <label>Base en Caja:</label>
+    <input type="number" [(ngModel)]="cierre.baseCaja" class="border p-1 w-full" />
+  </div>
+  <div>
+    <label>No. de Caja:</label>
+    <input type="text" [(ngModel)]="cierre.numeroCaja" class="border p-1 w-full" />
+  </div>
+  <div>
+    <label>Fecha de Cierre:</label>
+    <input type="date" [(ngModel)]="cierre.fechaCierre" class="border p-1 w-full" />
+  </div>
+</div>
+
+<!-- Clasificaciones -->
+<div class="mt-4">
+  <h2 class="bg-[#64839F] text-white text-xl font-bold px-2 py-1">Clasificaciones</h2>
+  <table class="w-full border">
+    <thead class="bg-[#8B0000] text-white">
+      <tr>
+        <th class="p-1">Clasificaciones</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of cierre.clasificaciones">
+        <td class="border p-1">{{ c.denominacion }}</td>
+        <td><input type="number" [(ngModel)]="c.cantidad" (input)="actualizarSubtotal(c)" class="border p-1 w-full" /></td>
+        <td class="text-center border p-1 ">{{ c.subtotal | currency:'Q' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Saldos de Caja -->
+<div class="mt-4">
+  <h2 class="bg-[#64839F] text-white text-xl font-bold px-2 py-1">Saldos de Caja</h2>
+  <table class="w-full border">
+    <thead class="bg-[#8B0000] text-white">
+      <tr>
+        <th>Descripción</th>
+        <th>Saldo Anterior</th>
+        <th>Entradas/Salidas</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Totales</td>
+        <td class="text-right">{{ cierre.baseCaja | currency:'Q' }}</td>
+        <td class="text-right">{{ entradasSalidas | currency:'Q' }}</td>
+        <td class="text-right font-bold">{{ total | currency:'Q' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<!-- Botones -->
+<div class="flex justify-center gap-4 mt-6">
+  <button (click)="exportarPDF()" class="bg-[#070826] text-white px-4 py-2">Exportar PDF</button>
+  <button (click)="cerrarCaja()" class="bg-[#070826] text-white px-4 py-2">Cerrar Caja</button>
+</div>

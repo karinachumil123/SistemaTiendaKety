@@ -1,0 +1,149 @@
+<div class="contenedor">
+    <!-- Filtros -->
+    <div class="filtros">
+        <div class="busqueda-fechas">
+
+            <!-- Buscador -->
+            <div class="buscador">
+                <input type="text" placeholder="Buscar por producto, código, categoría o proveedor"
+                    [(ngModel)]="filtroProducto" (keyup.enter)="buscarProducto()" />
+                <i class="fas fa-search icono-busqueda"></i>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="filtros-fecha">
+                <button (click)="buscarProducto()" class="btn-buscar">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </button>
+
+                <button (click)="limpiarFiltros()" class="btn-limpiar">
+                    <i class="fas fa-eraser"></i>
+                    Limpiar
+                </button>
+            </div>
+        </div>
+<!-- 
+         Resumen del inventario 
+        <div class="resumen-inventario">
+            <div class="stat-card">
+                <h3>Total Productos</h3>
+                <p>{{ totalProductos }}</p>
+            </div>
+            <div class="stat-card">
+                <h3>Stock Total</h3>
+                <p>{{ totalStock }} unidades</p>
+            </div>
+            <div class="stat-card">
+                <h3>Valor Total</h3>
+                <p>${{ valorTotalInventario | number:'1.2-2' }}</p>
+            </div>
+        </div>
+    </div> 
+-->
+
+    <!-- Reporte -->
+    <div id="reporteInventario" class="reporte">
+        <div class="encabezado-reporte">
+            <h1>REPORTE DE INVENTARIO</h1>
+            <div class="logo-centro">
+                <img src="/assets/images/Logo.png" alt="Logo Keytelin">
+            </div>
+            <div class="datos-empresa">
+                <div>
+                    <p><strong>Teléfono:</strong> {{ empresa?.telefono }}</p>
+                    <p><strong>Email:</strong> {{ empresa?.correo }}</p>
+                    <p><strong>Dirección:</strong> {{ empresa?.direccion }}</p>
+                </div>
+                <div>
+                    <p><strong>Mes y Año:</strong> {{ reportMonth }}</p>
+                    <p><strong>Día y hora de emisión:</strong> {{ reportDate }}</p>
+                    <p><strong>Realizado por:</strong> {{ reportUser }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de inventario -->
+        <table class="tabla-inventario">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Precio Compra</th>
+                    <th>Precio Venta</th>
+                    <th>Stock</th>
+                    <th>Categoría</th>
+                    <th>Estado</th>
+                    <th>Proveedor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of inventarioPaginado()">
+                    <td>{{ producto.productoId }}</td>
+                    <td>{{ producto.codigoProducto }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>Q. {{ producto.precioCompra | number:'1.2-2' }}</td>
+                    <td>Q. {{ producto.precioVenta | number:'1.2-2' }}</td>
+                    <td>
+                        <span [ngStyle]="{
+              'background-color': getColorStock(producto.stockDisponible),
+              'color': getColorTextoStock(producto.stockDisponible),
+              'padding': '0.25rem 0.5rem',
+              'border-radius': '9999px',
+              'font-size': '0.75rem',
+              'font-weight': '600',
+              'display': 'inline-flex'
+            }">
+                            {{ producto.stockDisponible }}
+                            <span *ngIf="producto.stockDisponible === 0" style="margin-left: 4px;">⚠️</span>
+                            <span *ngIf="producto.stockDisponible > 0 && producto.stockDisponible <= 5"
+                                style="margin-left: 4px;">⚡</span>
+                        </span>
+                    </td>
+                    <td>{{ producto.nombreCategoria }}</td>
+                    <td>
+                        <span [ngStyle]="{
+              'background-color': producto.nombreEstado === 'Activo' ? '#d1fae5' :
+                                 producto.nombreEstado === 'Inactivo' ? '#fee2e2' :
+                                 '#fef9c3',
+              'color': producto.nombreEstado === 'Activo' ? '#065f46' :
+                        producto.nombreEstado === 'Inactivo' ? '#991b1b' :
+                        '#78350f',
+              'padding': '0.25rem 0.5rem',
+              'border-radius': '9999px',
+              'font-size': '0.75rem',
+              'font-weight': '600',
+              'display': 'inline-flex'
+            }">
+                            {{ producto.nombreEstado }}
+                        </span>
+                    </td>
+                    <td>{{ producto.nombreProveedor }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Paginación -->
+        <div class="paginacion" *ngIf="totalPaginas > 1">
+            <button (click)="paginaAnterior()" [disabled]="paginaActual === 1" class="btn-paginacion">
+                <i class="fas fa-chevron-left"></i> Anterior
+            </button>
+            <span class="info-paginacion">
+                Página {{ paginaActual }} de {{ totalPaginas }}
+                ({{ productos.length }} productos)
+            </span>
+            <button (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas" class="btn-paginacion">
+                Siguiente <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Botón exportar -->
+    <div class="boton-exportar">
+        <button (click)="exportarPDFFrontend()">
+            <i class="fas fa-file-pdf"></i>
+            Exportar PDF
+        </button>
+    </div>
+</div>

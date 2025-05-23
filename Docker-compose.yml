@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: TiendaKeytlin.Server/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=DBtiendaK;Username=user_tienda;Password=123456789
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./tiendakeytlin.client
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: DBtiendaK
+      POSTGRES_USER: user_tienda
+      POSTGRES_PASSWORD: 123456789
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
