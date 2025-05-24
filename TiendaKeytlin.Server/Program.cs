@@ -82,7 +82,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseHttpsRedirection();
 
 app.UseAuthentication(); // Habilita la autenticación JWT
 

@@ -46,7 +46,7 @@ namespace TiendaKeytlin.Server.Data
 
             //Empresa
             modelBuilder.Entity<Empresa>().HasData(
-                  new Empresa { Id = 1, Nombre = "Tienda Keytlin", Telefono = "5881 6213", Correo = "tiendakeytelin@gmail.com", Direccion = "" }
+                  new Empresa { Id = 1, Nombre = "Tienda Keytlin", Telefono = "5881 6213", Correo = "tiendakeytelin@gmail.com", Direccion = "Los Tablones, San José Chacaya, Sololá" }
                  );
 
             //Usuario Admin
@@ -62,7 +62,7 @@ namespace TiendaKeytlin.Server.Data
 
             modelBuilder.Entity<RolPermiso>()
             .HasKey(rp => new { rp.RolId, rp.PermisoId });
-
+            
             // Insertar datos iniciales para Permisos
             modelBuilder.Entity<Permiso>().HasData(
 

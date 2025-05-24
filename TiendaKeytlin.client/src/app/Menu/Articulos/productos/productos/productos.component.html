@@ -91,10 +91,10 @@
           </td>
 
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-            {{ producto.precioAdquisicion | currency }}
+            {{ producto.precioAdquisicion | currency:'Q ' }}
           </td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-            {{ producto.precioVenta | currency }}
+            {{ producto.precioVenta | currency:'Q '}}
           </td>
           <td class="px-6 py-4 whitespace-nowrap">
              <img [src]="producto.imagen "

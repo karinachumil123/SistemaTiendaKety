@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:56232",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\..\\tiendakeytlin.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

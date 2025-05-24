@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ProductoService } from '../../../../services/productos.service';
+import { ProductosService } from '../../../../services/stock.service';
 import { VentaService } from '../../../../services/ventas.service';
 import Swal from 'sweetalert2';
 import { DetalleVentasComponent } from '../detalle-ventas/detalle-ventas.component';
@@ -27,36 +27,38 @@ export class VentasComponent implements OnInit {
   buscarProducto: string = '';
   vendedorId: number = 1;
   productosFiltrados: any[] = [];
-  
+
   // Añadimos referencias a los componentes hijo
   @ViewChild(DetalleVentasComponent) detalleVentasComponent!: DetalleVentasComponent;
   @ViewChild(ReciboVentasComponent) reciboVentasComponent!: ReciboVentasComponent;
-  
+
   // Variables para controlar la visibilidad de los modales
   mostrarDetalleVenta: boolean = false;
   mostrarReciboVenta: boolean = false;
-  
+
   // Datos para el recibo
   datosRecibo: ReciboVentaData | null = null;
 
   constructor(
-    private productoService: ProductoService,
+    private stockService: ProductosService,
     private ventaService: VentaService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.cargarProductos();
   }
 
+
+
   cargarProductos(): void {
-    this.productoService.obtenerProductos().subscribe({
+    this.stockService.obtenerStockProductos().subscribe({
       next: (data) => {
         this.productos = data.map(p => ({
-          id: p.id,
+          id: p.productoId,
           nombre: p.nombre,
           codigo: p.codigoProducto,
           precio: p.precioVenta,
-          disponibles: 50,
+          disponibles: p.stockDisponible,
           imagen: p.imagen || 'assets/no-image.png'
         }));
         this.actualizarProductosFiltrados();
@@ -65,11 +67,12 @@ export class VentasComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Error al cargar productos'
+          text: 'Error al cargar productos con stock'
         });
       }
     });
   }
+
 
   actualizarProductosFiltrados(): void {
     const filtro = this.buscarProducto.trim().toLowerCase();
@@ -197,7 +200,7 @@ export class VentasComponent implements OnInit {
     this.ventaService.obtenerReciboVenta(ventaId).subscribe({
       next: (recibo) => {
         console.log('RECIBO:', recibo);
-        
+
         // Preparar los datos para el componente RecibosVenta
         this.datosRecibo = {
           ventaId: ventaId,
@@ -212,7 +215,7 @@ export class VentasComponent implements OnInit {
           montoRecibido: recibo.montoRecibido,
           cambio: recibo.cambio
         };
-        
+
         // Mostrar el componente de recibo
         this.mostrarReciboVenta = true;
       },

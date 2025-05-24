@@ -310,7 +310,7 @@ namespace TiendaKeytlin.Server.Migrations
                         {
                             Id = 1,
                             Correo = "tiendakeytelin@gmail.com",
-                            Direccion = "",
+                            Direccion = "Los Tablones, San José Chacaya, Sololá",
                             Nombre = "Tienda Keytlin",
                             Telefono = "5881 6213"
                         });
