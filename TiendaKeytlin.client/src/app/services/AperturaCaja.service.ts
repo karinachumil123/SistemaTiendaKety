@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 export interface AperturaCaja {
   id?: number;
-  fecha: string; // por ejemplo: '2025-05-21T00:00:00Z' (ISO 8601)
+  fecha: string; // ISO 8601 format
   monto: number;
 }
 
@@ -12,16 +12,21 @@ export interface AperturaCaja {
   providedIn: 'root'
 })
 export class AperturaCajaService {
-  private readonly apiUrl = 'http://localhost:5010/api/aperturas'; // CORRECTO
+  private readonly apiUrl = 'http://localhost:5010/api/aperturas';
 
   constructor(private http: HttpClient) {}
 
   agregarApertura(apertura: AperturaCaja): Observable<any> {
-    // Aquí puedes hacer formateo de la fecha si es necesario, o enviarla tal cual
     return this.http.post(this.apiUrl, apertura);
   }
-  obtenerPorFecha(fecha: string): Observable<AperturaCaja | null> {
-  return this.http.get<AperturaCaja>(`${this.apiUrl}/aperturas/fecha/${fecha}`);
-}
 
+  // CORREGIDO: URL correcta para obtener por fecha
+  obtenerPorFecha(fecha: string): Observable<AperturaCaja> {
+    return this.http.get<AperturaCaja>(`${this.apiUrl}/por-fecha/${fecha}`);
+  }
+
+  // Método adicional para obtener la última apertura
+  obtenerUltimaApertura(): Observable<AperturaCaja[]> {
+    return this.http.get<AperturaCaja[]>(this.apiUrl);
+  }
 }

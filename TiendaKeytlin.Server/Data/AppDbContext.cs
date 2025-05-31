@@ -25,7 +25,8 @@ namespace TiendaKeytlin.Server.Data
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<DetallePedido> DetallePedidos { get; set; }
         public DbSet<EstadoPedido> EstadoPedido { get; set; }
-        
+        public DbSet<ClasificacionCaja> Clasificaciones { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {                                              
@@ -349,6 +350,93 @@ namespace TiendaKeytlin.Server.Data
                     .WithMany(e => e.Pedidos)
                     .HasForeignKey(p => p.EstadoPedidoId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+
+                // Configuración para AperturaCaja
+                modelBuilder.Entity<AperturaCaja>(entity =>
+                {
+                    entity.HasKey(e => e.Id);
+                    entity.Property(e => e.Fecha)
+                          .HasColumnType("timestamp without time zone");
+                    entity.Property(e => e.Monto)
+                          .HasColumnType("decimal(18,2)");
+                });
+
+                // Configuración para CierreCaja
+                modelBuilder.Entity<CierreCaja>(entity =>
+                {
+                    entity.HasKey(e => e.Id);
+
+                    entity.Property(e => e.NombreCajero)
+                          .HasMaxLength(100)
+                          .IsRequired();
+
+                    entity.Property(e => e.NumeroCaja)
+                          .HasMaxLength(50)
+                          .IsRequired();
+
+                    entity.Property(e => e.FechaApertura)
+                          .HasColumnType("timestamp without time zone");
+
+                    entity.Property(e => e.FechaCierre)
+                          .HasColumnType("timestamp without time zone");
+
+                    entity.Property(e => e.BaseCaja)
+                          .HasColumnType("decimal(18,2)");
+
+                    // Relación 1:N con ClasificacionCaja
+                    entity.HasMany(e => e.Clasificaciones)
+                          .WithOne()
+                          .HasForeignKey(c => c.CierreCajaId)
+                          .OnDelete(DeleteBehavior.Cascade);
+
+                    // Relación 1:1 con SaldosCaja
+                    entity.HasOne(e => e.Saldos)
+                          .WithOne()
+                          .HasForeignKey<SaldosCaja>(s => s.CierreCajaId)
+                          .OnDelete(DeleteBehavior.Cascade);
+                });
+
+                // Configuración para ClasificacionCaja
+                modelBuilder.Entity<ClasificacionCaja>(entity =>
+                {
+                    entity.HasKey(e => e.Id);
+
+                    entity.Property(e => e.Denominacion)
+                          .HasMaxLength(50)
+                          .IsRequired();
+
+                    entity.Property(e => e.Valor)
+                          .HasColumnType("decimal(18,2)");
+
+                    entity.Property(e => e.Subtotal)
+                          .HasColumnType("decimal(18,2)");
+
+                    // Índice para mejorar performance en consultas
+                    entity.HasIndex(e => e.CierreCajaId);
+                });
+
+                // Configuración para SaldosCaja
+                modelBuilder.Entity<SaldosCaja>(entity =>
+                {
+                    entity.HasKey(e => e.Id);
+
+                    entity.Property(e => e.SaldoAnterior)
+                          .HasColumnType("decimal(18,2)");
+
+                    entity.Property(e => e.EntradasSalidas)
+                          .HasColumnType("decimal(18,2)");
+
+                    entity.Property(e => e.Subtotal)
+                          .HasColumnType("decimal(18,2)");
+
+                    entity.Property(e => e.Total)
+                          .HasColumnType("decimal(18,2)");
+
+                    // Índice único para asegurar 1:1 con CierreCaja
+                    entity.HasIndex(e => e.CierreCajaId)
+                          .IsUnique();
+                });
             });
         }
     }

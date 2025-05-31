@@ -63,18 +63,40 @@
   <!-- Tabla de Productos -->
   <div class="bg-white rounded-lg shadow overflow-x-auto">
     <table class="min-w-full divide-y divide-gray-200">
-      <thead class="bg-gray-50">
-        <tr>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Código</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio de Adquisición</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio de venta</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Foto</th>
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
-        </tr>
-      </thead>
+<thead class="bg-gray-50 text-xs font-medium text-gray-500 uppercase tracking-wider">
+  <tr>
+    <th class="px-6 py-3 text-left cursor-pointer" (click)="ordenarPor('id')">
+      ID
+      <i *ngIf="columnaOrden === 'id'" class="fas" [ngClass]="ordenAscendente ? 'fa-sort-up' : 'fa-sort-down'"></i>
+    </th>
+    <th class="px-6 py-3 text-left cursor-pointer" (click)="ordenarPor('nombre')">
+      Nombre
+      <i *ngIf="columnaOrden === 'nombre'" class="fas" [ngClass]="ordenAscendente ? 'fa-sort-up' : 'fa-sort-down'"></i>
+    </th>
+    <th class="px-6 py-3 text-left cursor-pointer" (click)="ordenarPor('codigoProducto')">
+      Código
+      <i *ngIf="columnaOrden === 'codigoProducto'" class="fas" [ngClass]="ordenAscendente ? 'fa-sort-up' : 'fa-sort-down'"></i>
+    </th>
+    <th class="px-6 py-3 text-left cursor-pointer" (click)="ordenarPor('estado')">
+      Estado
+      <i *ngIf="columnaOrden === 'estado'" class="fas" [ngClass]="ordenAscendente ? 'fa-sort-up' : 'fa-sort-down'"></i>
+    </th>
+    <th class="px-6 py-3 text-left cursor-pointer" (click)="ordenarPor('precioAdquisicion')">
+      Precio Adq.
+      <i *ngIf="columnaOrden === 'precioAdquisicion'" class="fas" [ngClass]="ordenAscendente ? 'fa-sort-up' : 'fa-sort-down'"></i>
+    </th>
+    <th class="px-6 py-3 text-left cursor-pointer" (click)="ordenarPor('precioVenta')">
+      Precio Venta
+      <i *ngIf="columnaOrden === 'precioVenta'" class="fas" [ngClass]="ordenAscendente ? 'fa-sort-up' : 'fa-sort-down'"></i>
+    </th>
+    <th class="px-6 py-3 text-left">
+      Foto
+    </th>
+    <th class="px-6 py-3 text-left">
+      Acciones
+    </th>
+  </tr>
+</thead>
       <tbody class="bg-white divide-y divide-gray-200">
         <tr *ngFor="let producto of productosPaginados()" class="hover:bg-gray-50 transition-colors duration-150">
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ producto.id }}</td>

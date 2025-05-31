@@ -3,63 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\src\\app\\menu\\articulos\\productos\\productos\\productos.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\src\\app\\menu\\articulos\\productos\\productos\\productos.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\src\\app\\menu\\caja\\apertura-caja\\apertura-caja.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\src\\app\\menu\\caja\\apertura-caja\\apertura-caja.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\src\\app\\menu\\caja\\cierre-caja\\cierre-caja.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\src\\app\\menu\\caja\\cierre-caja\\cierre-caja.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\src\\app\\components\\dashboard\\dashboard.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\src\\app\\components\\dashboard\\dashboard.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\dist\\tiendakeytlin.client\\browser\\main-oc5hnxo7.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\dist\\tiendakeytlin.client\\browser\\main-oc5hnxo7.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\src\\app\\menu\\ventas\\ventas\\ventas\\ventas.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\src\\app\\menu\\ventas\\ventas\\ventas\\ventas.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\src\\app\\menu\\ventas\\ventas\\ventas\\ventas.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\src\\app\\menu\\ventas\\ventas\\ventas\\ventas.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\controllers\\aperturacajacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\aperturacajacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\models\\cierrecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\cierrecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\models\\estadopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\estadopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\controllers\\cierrecajacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\cierrecajacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.client\\tiendakeytlin.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C1EE8133-5DF5-1682-9D53-B1CBF5D56CAF}|tiendakeytlin.client\\tiendakeytlin.client.esproj|solutionrelative:tiendakeytlin.client\\tiendakeytlin.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\proyecto reportes\\sistematiendakety\\tiendakeytlin.server\\models\\aperturacaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\aperturacaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,200 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "main-OC5HNXO7.js",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\dist\\tiendakeytlin.client\\browser\\main-OC5HNXO7.js",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\dist\\tiendakeytlin.client\\browser\\main-OC5HNXO7.js",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\dist\\tiendakeytlin.client\\browser\\main-OC5HNXO7.js",
-              "RelativeToolTip": "TiendaKeytlin.client\\dist\\tiendakeytlin.client\\browser\\main-OC5HNXO7.js",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwEMAAADZ+QEAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-24T03:45:16.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dashboard.component.html",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\components\\dashboard\\dashboard.component.html",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\src\\app\\components\\dashboard\\dashboard.component.html",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\components\\dashboard\\dashboard.component.html",
-              "RelativeToolTip": "TiendaKeytlin.client\\src\\app\\components\\dashboard\\dashboard.component.html",
-              "ViewState": "AgIAABsAAAAAAAAAAAAawDEAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-24T03:45:13.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cierre-caja.component.html",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Caja\\cierre-caja\\cierre-caja.component.html",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\src\\app\\Menu\\Caja\\cierre-caja\\cierre-caja.component.html",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Caja\\cierre-caja\\cierre-caja.component.html",
-              "RelativeToolTip": "TiendaKeytlin.client\\src\\app\\Menu\\Caja\\cierre-caja\\cierre-caja.component.html",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEEAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-24T03:45:10.636Z",
+              "DocumentIndex": 0,
+              "Title": "AperturaCajaController.cs",
+              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Controllers\\AperturaCajaController.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\AperturaCajaController.cs",
+              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Controllers\\AperturaCajaController.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\AperturaCajaController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T15:48:20.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "apertura-caja.component.html",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Caja\\apertura-caja\\apertura-caja.component.html",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\src\\app\\Menu\\Caja\\apertura-caja\\apertura-caja.component.html",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Caja\\apertura-caja\\apertura-caja.component.html",
-              "RelativeToolTip": "TiendaKeytlin.client\\src\\app\\Menu\\Caja\\apertura-caja\\apertura-caja.component.html",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-24T03:45:03.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "productos.component.html",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Articulos\\productos\\productos\\productos.component.html",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\src\\app\\Menu\\Articulos\\productos\\productos\\productos.component.html",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Articulos\\productos\\productos\\productos.component.html",
-              "RelativeToolTip": "TiendaKeytlin.client\\src\\app\\Menu\\Articulos\\productos\\productos\\productos.component.html",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAawGAAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-24T03:44:17.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ventas.component.html",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.html",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.html",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.html",
-              "RelativeToolTip": "TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.html",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAgwGUAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-24T03:40:34.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ventas.component.ts",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.ts",
-              "RelativeDocumentMoniker": "TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.ts",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.ts",
-              "RelativeToolTip": "TiendaKeytlin.client\\src\\app\\Menu\\Ventas\\ventas\\ventas\\ventas.component.ts",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwBQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-05-24T03:39:52.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Proveedor.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\Proveedor.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\Proveedor.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\Proveedor.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\Proveedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T03:14:05.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EstadoPedido.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\EstadoPedido.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\EstadoPedido.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\EstadoPedido.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\EstadoPedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T02:53:15.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "TiendaKeytlin.Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAI0BAAAAAAAAAADwv1MBAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T02:34:00.753Z",
+              "WhenOpened": "2025-05-30T14:46:07.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "tiendakeytlin.client",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\tiendakeytlin.client\\tiendakeytlin.client.esproj",
-              "RelativeDocumentMoniker": "tiendakeytlin.client\\tiendakeytlin.client.esproj",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\tiendakeytlin.client\\tiendakeytlin.client.esproj",
-              "RelativeToolTip": "tiendakeytlin.client\\tiendakeytlin.client.esproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-23T23:21:23.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Properties\\launchSettings.json",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-23T23:21:01.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Services\\AuthService.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Services\\AuthService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CierreCaja.cs",
+              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\CierreCaja.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\CierreCaja.cs",
+              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\CierreCaja.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\CierreCaja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T23:09:22.639Z",
+              "WhenOpened": "2025-05-30T14:09:05.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAP4UAAAAAAAAAAAiwBIVAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-05-23T23:08:56.965Z"
+              "DocumentIndex": 3,
+              "Title": "CierreCajaController.cs",
+              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Controllers\\CierreCajaController.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\CierreCajaController.cs",
+              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Controllers\\CierreCajaController.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\CierreCajaController.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAuwMEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T14:08:52.86Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Program.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Program.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AperturaCaja.cs",
+              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\AperturaCaja.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\AperturaCaja.cs",
+              "ToolTip": "C:\\Users\\guait\\Desktop\\Proyecto Reportes\\SistemaTiendaKety\\TiendaKeytlin.Server\\Models\\AperturaCaja.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\AperturaCaja.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T23:07:56.531Z",
+              "WhenOpened": "2025-05-30T14:03:19.372Z",
               "EditorCaption": ""
             }
           ]

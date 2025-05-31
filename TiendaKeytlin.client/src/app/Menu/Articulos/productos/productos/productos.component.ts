@@ -21,6 +21,10 @@ export class ProductosComponent implements OnInit {
   modoVista = false;
   @ViewChild(ProductosModalComponent) productoModalComponent!: ProductosModalComponent;
 
+  //OrdenarColumnas
+columnaOrden: string = '';
+ordenAscendente: boolean = true;
+
   // Filtros
   filtroProducto = '';
   fechaInicio = '';
@@ -46,6 +50,31 @@ export class ProductosComponent implements OnInit {
     this.cargarPermisos();
   }
 
+ordenarPor(columna: string): void {
+  if (this.columnaOrden === columna) {
+    this.ordenAscendente = !this.ordenAscendente;
+  } else {
+    this.columnaOrden = columna;
+    this.ordenAscendente = true;
+  }
+
+  this.productos.sort((a: any, b: any) => {
+    let valorA = a[columna];
+    let valorB = b[columna];
+
+    // Normalizar mayúsculas/minúsculas si son strings
+    if (typeof valorA === 'string') {
+      valorA = valorA.toLowerCase();
+    }
+    if (typeof valorB === 'string') {
+      valorB = valorB.toLowerCase();
+    }
+
+    if (valorA < valorB) return this.ordenAscendente ? -1 : 1;
+    if (valorA > valorB) return this.ordenAscendente ? 1 : -1;
+    return 0;
+  });
+}
   cargarPermisos() {
     const permisos = this.authService.obtenerPermisos();
     this.puedeCrear = permisos.includes('Crear Productos');

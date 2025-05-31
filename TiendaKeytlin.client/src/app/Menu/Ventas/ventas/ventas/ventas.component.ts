@@ -83,18 +83,20 @@ export class VentasComponent implements OnInit {
   }
 
   agregarAlCarrito(producto: any): void {
-    const item = this.carrito.find(i => i.id === producto.id);
-    if (item) {
-      if (item.cantidad < producto.disponibles) {
-        item.cantidad += 1;
-      } else {
-        Swal.fire({
-          icon: 'warning',
-          title: 'Sin stock disponible',
-          text: 'No hay más unidades disponibles de este producto'
-        });
-      }
+  const item = this.carrito.find(i => i.id === producto.id);
+
+  if (item) {
+    if (item.cantidad < producto.disponibles) {
+      item.cantidad += 1;
     } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Sin stock disponible',
+        text: 'No hay más unidades disponibles de este producto'
+      });
+    }
+  } else {
+    if (producto.disponibles > 0) {
       this.carrito.push({
         id: producto.id,
         nombre: producto.nombre,
@@ -104,8 +106,16 @@ export class VentasComponent implements OnInit {
         disponibles: producto.disponibles,
         imagen: producto.imagen
       });
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Sin stock disponible',
+        text: 'No hay unidades disponibles de este producto'
+      });
     }
   }
+}
+
 
   cambiarCantidad(item: ProductoCarrito, cambio: number): void {
     const nuevaCantidad = item.cantidad + cambio;

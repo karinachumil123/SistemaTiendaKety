@@ -4,7 +4,9 @@
 <div class="grid grid-cols-3 gap-4 mb-4">
   <div>
     <label>Nombre de cajero:</label>
-    <input type="text" [(ngModel)]="cierre.nombreCajero" class="border p-1 w-full" />
+        <span class="block text-sm font-medium">
+          {{ currentUser.name }} {{ currentUser.apellido }}
+        </span>
   </div>
   <div>
     <label>Fecha de Apertura:</label>
