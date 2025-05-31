@@ -237,6 +237,20 @@ export class UsuariosComponent implements OnInit {
     };
     this.modoVista = true;
     this.mostrarModal = true; // Asegúrate de que este modal solo muestre información
+    
+    setTimeout(() => {
+      if (this.usuarioSeleccionado.Imagen) {
+        const imagen = this.usuarioSeleccionado.Imagen;
+    
+        if (imagen.startsWith('data:image')) {
+          // Es base64, asignar directamente
+          this.usuarioModalComponent.imagenPrevia = imagen;
+        } else {
+          // Es nombre de imagen, usar método para obtener la URL del backend
+          this.usuarioModalComponent.imagenPrevia = this.usuarioService.getImagenUrl(imagen);
+        }
+      }
+    });
   }
 
   guardarUsuario(usuario: any) {

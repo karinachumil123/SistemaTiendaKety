@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ProductoService } from '../../../../services/productos.service';
+import { Producto, ProductoService } from '../../../../services/productos.service';
 import Swal from 'sweetalert2';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -16,14 +16,11 @@ import { AuthService } from '../../../../services/auth.service';
 export class ProductosComponent implements OnInit {
   productos: any[] = [];
   originalProducto: any[] = [];
-  mostrarModal = false;
-  productoSeleccionado: any = null;
   modoVista = false;
+  mostrarModal: boolean = false;
+  productoSeleccionado: Producto | null = null;
+  modoVer: boolean = false;
   @ViewChild(ProductosModalComponent) productoModalComponent!: ProductosModalComponent;
-
-  //OrdenarColumnas
-columnaOrden: string = '';
-ordenAscendente: boolean = true;
 
   // Filtros
   filtroProducto = '';
@@ -50,31 +47,6 @@ ordenAscendente: boolean = true;
     this.cargarPermisos();
   }
 
-ordenarPor(columna: string): void {
-  if (this.columnaOrden === columna) {
-    this.ordenAscendente = !this.ordenAscendente;
-  } else {
-    this.columnaOrden = columna;
-    this.ordenAscendente = true;
-  }
-
-  this.productos.sort((a: any, b: any) => {
-    let valorA = a[columna];
-    let valorB = b[columna];
-
-    // Normalizar mayúsculas/minúsculas si son strings
-    if (typeof valorA === 'string') {
-      valorA = valorA.toLowerCase();
-    }
-    if (typeof valorB === 'string') {
-      valorB = valorB.toLowerCase();
-    }
-
-    if (valorA < valorB) return this.ordenAscendente ? -1 : 1;
-    if (valorA > valorB) return this.ordenAscendente ? 1 : -1;
-    return 0;
-  });
-}
   cargarPermisos() {
     const permisos = this.authService.obtenerPermisos();
     this.puedeCrear = permisos.includes('Crear Productos');
@@ -98,6 +70,13 @@ ordenarPor(columna: string): void {
       }
     });
   }
+
+  productoEstado(estado: string | boolean | undefined): string {
+  if (estado === true) return 'Activo';
+  if (estado === false) return 'Inactivo';
+  if (typeof estado === 'string') return estado;
+  return 'Desconocido'; // o el texto que prefieras para estados nulos o indefinidos
+}
 
   buscarProducto() {
     if (!this.filtroProducto.trim()) {
@@ -196,78 +175,109 @@ limpiarFiltros() {
     }
   }
 
-  abrirModalCrear() {
-    this.productoSeleccionado = {
-      id: 0,
-      nombre: '',
-      codigoProducto: '',
-      estado: '',
-      precioAdquisicion: 0,
-      precioVenta: 0,
-      imagen: '',
-      fechaCreacion: new Date().toISOString()
-    };
-    this.mostrarModal = true;
-    this.modoVista = false;
+  abrirModal(producto?: Producto, modoVer: boolean = false) {
+  this.productoSeleccionado = producto ? { ...producto } : null;
+  this.modoVer = modoVer;
+  this.mostrarModal = true;
+
+  setTimeout(() => {
+    if (this.productoSeleccionado && this.productoSeleccionado.imagen) {
+      const imagen = this.productoSeleccionado.imagen as string;
+      this.productoModalComponent.imagenPrevia = imagen.startsWith('data:image')
+        ? imagen
+        : this.productoService.getImagenUrl(imagen);
+    }
+  });
+}
+
+
+
+    eliminarProducto(id: number | undefined) {
+    if (!id) return;
+
+    if (confirm('¿Estás seguro de eliminar este proveedor?')) {
+      this.productoService.eliminarProductoLogico(id).subscribe({
+        next: () => {
+          this.productos = this.productos.filter(p => p.id !== id);
+          this.filtrarProductos();
+        },
+        error: (error) => console.error('Error al eliminar proveedor:', error)
+      });
+    }
   }
 
-  abrirModalEditar(producto: any) {
-    this.productoSeleccionado = {
-      id: producto.id || producto.Id,
-      nombre: producto.nombre || producto.Nombre,
-      codigoProducto: producto.codigoProducto || producto.CodigoProducto,
-      marca: producto.marca || producto.Marca,
-      descripcion: producto.descripcion || producto.Descripcion,
-      precioAdquisicion: producto.precioAdquisicion || producto.PrecioAdquisicion,
-      precioVenta: producto.precioVenta || producto.PrecioVenta,
-      stock: producto.stock || producto.Stock,
-      categoriaId: producto.categoriaId || producto.CategoriaId,
-      proveedorId: producto.proveedorId || producto.ProveedorId,
-      imagen: producto.imagen || producto.Imagen,
-      estado: producto.estado ?? producto.Estado,
-    };
+  // abrirModalCrear() {
+  //   this.productoSeleccionado = {
+  //     id: 0,
+  //     nombre: '',
+  //     codigoProducto: '',
+  //     estado: '',
+  //     precioAdquisicion: 0,
+  //     precioVenta: 0,
+  //     imagen: '',
+  //    // fechaCreacion: new Date().toISOString()
+  //   };
+  //   this.mostrarModal = true;
+  //   this.modoVista = false;
+  // }
 
-    this.mostrarModal = true;
-    this.modoVista = false;
+  // abrirModalEditar(producto: any) {
+  //   this.productoSeleccionado = {
+  //     id: producto.id || producto.Id,
+  //     nombre: producto.nombre || producto.Nombre,
+  //     codigoProducto: producto.codigoProducto || producto.CodigoProducto,
+  //     marca: producto.marca || producto.Marca,
+  //     descripcion: producto.descripcion || producto.Descripcion,
+  //     precioAdquisicion: producto.precioAdquisicion || producto.PrecioAdquisicion,
+  //     precioVenta: producto.precioVenta || producto.PrecioVenta,
+  //     stock: producto.stock || producto.Stock,
+  //     categoriaId: producto.categoriaId || producto.CategoriaId,
+  //     proveedorId: producto.proveedorId || producto.ProveedorId,
+  //     imagen: producto.imagen || producto.Imagen,
+  //     estado: producto.estado ?? producto.Estado,
+  //   };
 
-    setTimeout(() => {
-      if (this.productoSeleccionado.imagen) {
-        const imagen = this.productoSeleccionado.imagen;
-        this.productoModalComponent.imagenPrevia = imagen.startsWith('data:image')
-          ? imagen
-          : this.productoService.getImagenUrl(imagen);
-      }
-    });
-  }
+  //   this.mostrarModal = true;
+  //   this.modoVista = false;
 
-  verProducto(producto: any) {
-    this.productoSeleccionado = {
-      id: producto.id || producto.Id,
-      nombre: producto.nombre || producto.Nombre,
-      codigoProducto: producto.codigoProducto || producto.CodigoProducto,
-      marca: producto.marca || producto.Marca,
-      descripcion: producto.descripcion || producto.Descripcion,
-      precioAdquisicion: producto.precioAdquisicion || producto.PrecioAdquisicion,
-      precioVenta: producto.precioVenta || producto.PrecioVenta,
-      stock: producto.stock || producto.Stock,
-      categoriaId: producto.categoriaId || producto.CategoriaId,
-      proveedorId: producto.proveedorId || producto.ProveedorId,
-      imagen: producto.imagen || producto.Imagen,
-      estado: producto.estado ?? producto.Estado,
-    };
+  //   setTimeout(() => {
+  //     if (this.productoSeleccionado.imagen) {
+  //       const imagen = this.productoSeleccionado.imagen;
+  //       this.productoModalComponent.imagenPrevia = imagen.startsWith('data:image')
+  //         ? imagen
+  //         : this.productoService.getImagenUrl(imagen);
+  //     }
+  //   });
+  // }
 
-    this.modoVista = true;
-    this.mostrarModal = true;
+  // verProducto(producto: any) {
+  //   this.productoSeleccionado = {
+  //     id: producto.id || producto.Id,
+  //     nombre: producto.nombre || producto.Nombre,
+  //     codigoProducto: producto.codigoProducto || producto.CodigoProducto,
+  //     marca: producto.marca || producto.Marca,
+  //     descripcion: producto.descripcion || producto.Descripcion,
+  //     precioAdquisicion: producto.precioAdquisicion || producto.PrecioAdquisicion,
+  //     precioVenta: producto.precioVenta || producto.PrecioVenta,
+  //     stock: producto.stock || producto.Stock,
+  //     categoriaId: producto.categoriaId || producto.CategoriaId,
+  //     proveedorId: producto.proveedorId || producto.ProveedorId,
+  //     imagen: producto.imagen || producto.Imagen,
+  //     estado: producto.estado ?? producto.Estado,
+  //   };
 
-    setTimeout(() => {
-      if (this.productoSeleccionado.imagen) {
-        const imagen = this.productoSeleccionado.imagen;
-        this.productoModalComponent.imagenPrevia = imagen.startsWith('data:image')
-          ? imagen
-          : this.productoService.getImagenUrl(imagen);
-      }
-    });
-  }
+  //   this.modoVista = true;
+  //   this.mostrarModal = true;
+
+  //   setTimeout(() => {
+  //     if (this.productoSeleccionado.imagen) {
+  //       const imagen = this.productoSeleccionado.imagen;
+  //       this.productoModalComponent.imagenPrevia = imagen.startsWith('data:image')
+  //         ? imagen
+  //         : this.productoService.getImagenUrl(imagen);
+  //     }
+  //   });
+  // }
 
   guardarProducto(producto: any) {
     const codigoExistente = this.originalProducto.find(p =>
@@ -350,10 +360,10 @@ limpiarFiltros() {
     });
   }
 
+
   cerrarModal() {
     this.mostrarModal = false;
     this.productoSeleccionado = null;
+    this.modoVer = false;
   }
 }
-
- 

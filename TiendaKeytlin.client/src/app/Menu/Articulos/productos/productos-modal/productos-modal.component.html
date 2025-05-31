@@ -2,14 +2,14 @@
   <div class="absolute inset-0 bg-black opacity-50"></div>
   <div class="bg-white rounded-lg shadow-lg p-6 relative z-10 w-full max-w-4xl">
     <div class="max-h-[75vh] overflow-y-auto rounded-lg pr-2">
-      <span class="absolute top-0 right-0 p-4 cursor-pointer" (click)="cerrarModal()">&times;</span>
+      <span class="absolute top-0 right-0 p-4 cursor-pointer" (click)="cerrarModal.emit()">&times;</span>
 
       <h2 class="text-2xl font-bold mb-4 border-b pb-2 text-left">
-        {{ modoVista ? 'Detalles del producto' : producto.id ? 'Editar producto' : 'Agregar producto' }}
+        {{ modoVer ? 'Detalles del producto' : producto.id ? 'Editar producto' : 'Agregar producto' }}
       </h2>
 
-      <form (ngSubmit)="!modoVista && onSubmit()" #productoForm="ngForm" novalidate>
-        <fieldset [disabled]="modoVista">
+      <form (ngSubmit)="!modoVer && onSubmit()" #productoForm="ngForm" novalidate>
+        <fieldset [disabled]="modoVer">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
             <!-- Nombre -->
@@ -25,7 +25,7 @@
                 [(ngModel)]="producto.nombre"
                 #nombre="ngModel"
                 required
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               />
@@ -48,7 +48,7 @@
                 [(ngModel)]="producto.codigoProducto"
                 #codigo="ngModel"
                 required
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               />
@@ -61,7 +61,7 @@
             <!-- Marca -->
             <div class="mb-4">
               <label for="marca" class="block text-sm font-medium mb-1 text-left" style="color: #670305;">
-                Marca producto
+                Marca producto <span style="color: #670305;">*</span>
               </label>
               <input
                 type="text"
@@ -70,7 +70,7 @@
                 maxlength="100"
                 [(ngModel)]="producto.MarcaProducto"
                 #marca="ngModel"
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               />
@@ -93,7 +93,7 @@
                 [(ngModel)]="producto.precioAdquisicion"
                 #precioCompra="ngModel"
                 required
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               />
@@ -117,7 +117,7 @@
                 [(ngModel)]="producto.precioVenta"
                 #precioVenta="ngModel"
                 required
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               />
@@ -165,7 +165,7 @@
                 name="categoria"
                 [(ngModel)]="producto.categoriaId"
                 required
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               >
@@ -184,7 +184,7 @@
                 name="proveedor"
                 [(ngModel)]="producto.proveedorId"
                 required
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1"
                 style="border: 1px solid #070826; color: #670305;"
               >
@@ -204,7 +204,7 @@
                 maxlength="500"
                 rows="3"
                 [(ngModel)]="producto.descripcion"
-                [class.bg-gray-100]="modoVista"
+                [class.bg-gray-100]="modoVer"
                 class="rounded w-full py-2 px-3 focus:outline-none focus:ring-1 resize-none"
                 style="border: 1px solid #070826; color: #670305;"></textarea>
             </div>
@@ -218,7 +218,7 @@
               <img [src]="imagenPrevia" alt="Vista previa de imagen"
                 class="h-24 w-24 object-cover rounded-lg border border-gray-200">
             </div>
-            <div class="flex items-center" *ngIf="!modoVista">
+            <div class="flex items-center" *ngIf="!modoVer">
               <input type="file" id="fileInput" accept="image/jpeg, image/png" (change)="onFileSelected($event)"
                 class="hidden">
               <button type="button" (click)="onFileInputClick()" [disabled]="cargando"
@@ -246,12 +246,14 @@
 
         <!-- Botones -->
         <div class="flex justify-end mt-6 space-x-3">
-          <button type="button" (click)="cerrarModal()"
+          <button
+            type="button"
+            (click)="cerrarModal.emit()"
             class="px-4 py-2 border border-gray-300 rounded-md text-white bg-[#B40001] hover:bg-[#9b0000]">
-            {{ modoVista ? 'Cerrar' : 'Cancelar' }}
+            {{ modoVer ? 'Cerrar' : 'Cancelar' }}
           </button>
 
-          <button type="submit" *ngIf="!modoVista" [disabled]="!productoForm.form.valid || cargando"
+          <button type="submit" *ngIf="!modoVer" [disabled]="!productoForm.form.valid || cargando"
             class="px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-[#070826] hover:bg-[#05061c] disabled:opacity-50 disabled:cursor-not-allowed">
             Guardar
           </button>

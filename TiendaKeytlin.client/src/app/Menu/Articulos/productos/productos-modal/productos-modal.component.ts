@@ -1,3 +1,5 @@
+
+
 import { Component, EventEmitter, Inject, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule, DOCUMENT } from '@angular/common';
@@ -37,9 +39,8 @@ export class ProductosModalComponent implements OnInit {
     precioAdquisicion: null,
     precioVenta: null
   };
-  
-  @Input() modoVista: boolean = false;
-  @Output() cerrar = new EventEmitter<void>();
+  @Input() modoVer: boolean = false;
+  @Output() cerrarModal = new EventEmitter<void>();
   @Output() guardar = new EventEmitter<Producto>();
   @ViewChild('productoForm') productoForm!: NgForm;
 
@@ -66,38 +67,55 @@ export class ProductosModalComponent implements OnInit {
     if (this.producto.imagen) {
       this.imagenPrevia = this.getImagenUrl(this.producto.imagen);
     }
-  }
- 
-  cargarDatos(): void {
-    this.productoService.obtenerCategorias().subscribe(categorias => {
-      console.log('Categorías cargadas:', categorias);
-      this.categorias = categorias;
-      if (!this.producto.id) {
-        const porDefecto = categorias.find(c => c.categoriaNombre?.toLowerCase() === 'general');
-        if (porDefecto) this.producto.categoriaId = porDefecto.id;
+    if (this.modoVer) {
+    setTimeout(() => {
+      const form = this.productoForm;
+      if (form) {
+        Object.keys(form.controls).forEach(key => {
+          form.controls[key].disable();
+        });
       }
     });
-  
-    this.productoService.obtenerProveedores().subscribe(proveedores => {
+  }
+  }
+
+  getTitulo(): string {
+  if (this.modoVer) return 'Ver Producto';
+  return (this.producto.id && this.producto.id > 0) ? 'Editar Producto' : 'Agregar Producto';
+}
+ 
+  // En el modal, modifica la carga de datos:
+cargarDatos(): void {
+  this.productoService.obtenerCategorias().subscribe({
+    next: (categorias) => {
+      this.categorias = categorias;
+      // Si no hay categoría seleccionada, asignar una por defecto
+      if (!this.producto.categoriaId && categorias.length > 0) {
+        this.producto.categoriaId = categorias.find(c => c.categoriaNombre?.toLowerCase() === 'general')?.id || categorias[0].id;
+      }
+    }
+  });
+
+  this.productoService.obtenerProveedores().subscribe({
+    next: (proveedores) => {
       this.proveedores = proveedores;
-      if (!this.producto.id && proveedores.length > 0) {
+      if (!this.producto.proveedorId && proveedores.length > 0) {
         this.producto.proveedorId = proveedores[0].id;
       }
-    });
+    }
+  });
 
-    this.productoService.obtenerEstados().subscribe(estados => {
-      console.log('Estados recibidos en modal:', estados);
+  this.productoService.obtenerEstados().subscribe({
+    next: (estados) => {
       this.estados = estados;
-      if (!this.producto.id && estados.length > 0) {
-        const estadoActivo = estados.find(e => e.Nombre?.toLowerCase() === 'activo');
-        if (estadoActivo) {
-          this.producto.estadoId = estadoActivo.Id;
-          console.log('Estado por defecto establecido:', estadoActivo);
-        }
+      // Si no hay estado seleccionado, asignar 'Activo' por defecto
+      if (!this.producto.estadoId && estados.length > 0) {
+        const estadoActivo = estados.find(e => e.nombre?.toLowerCase() === 'activo');
+        this.producto.estadoId = estadoActivo ? estadoActivo.id : estados[0].id;
       }
-    });
-  
-  }  
+    }
+  });
+}
   
 
   onFileSelected(event: Event): void {
@@ -156,6 +174,10 @@ export class ProductosModalComponent implements OnInit {
   }
 
 async onSubmit(): Promise<void> {
+
+  if (this.modoVer) {
+      return; // No hacer nada si solo estamos viendo
+    }
   if (this.cargando) return;
 
   if (this.productoForm.invalid || !this.validarFormulario()) {
@@ -233,7 +255,5 @@ private validarFormulario(): boolean {
     });
   }
 
-  cerrarModal(): void {
-    this.cerrar.emit();
-  }
 }
+
